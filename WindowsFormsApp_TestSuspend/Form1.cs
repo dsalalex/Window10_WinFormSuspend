@@ -15,6 +15,15 @@ namespace WindowsFormsApp_TestSuspend
         public Form1()
         {
             InitializeComponent();
+
+            //Case 1: The application will turn into suspend status
+            throw new Exception("Error");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Case 2: The application will pop up an error dialog(JIT error), after close the dialog, the application will terminated
+            //throw new Exception("Error");
         }
     }
 }
